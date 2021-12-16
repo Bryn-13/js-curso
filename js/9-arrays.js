@@ -53,62 +53,62 @@ const numeros = [10,20,30,40,50];
 
 // ** -- MÁS MÉTODOS -- **
 
-const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo"];
+// const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo"];
 
 
-const carrito = [
-    {nombre: "Monitor HD", precio: 500},
-    {nombre: "Televisor 50\"", precio: 700},
-    {nombre: "Tablet", precio: 300},
-    {nombre: "Audífonos", precio: 200},
-    {nombre: "Teclado", precio: 50},
-    {nombre: "Celular", precio: 500},
-    {nombre: "Bocinas", precio: 300},
-    {nombre: "Laptop", precio: 800},
-];
+// const carrito = [
+//     {nombre: "Monitor HD", precio: 500},
+//     {nombre: "Televisor 50\"", precio: 700},
+//     {nombre: "Tablet", precio: 300},
+//     {nombre: "Audífonos", precio: 200},
+//     {nombre: "Teclado", precio: 50},
+//     {nombre: "Celular", precio: 500},
+//     {nombre: "Bocinas", precio: 300},
+//     {nombre: "Laptop", precio: 800},
+// ];
 
 // forEach
 
-meses.forEach(function(mes) {
-    if(mes = "Marzo") {
-        console.log("Marzo sí existe")
-    }
-    else {
-        console.log("Marzo no existe")
-    }
-}
-);
+// meses.forEach(function(mes) {
+//     if(mes = "Marzo") {
+//         console.log("Marzo sí existe")
+//     }
+//     else {
+//         console.log("Marzo no existe")
+//     }
+// }
+// );
 
 // Includes
 
-let resultado = meses.includes("Diciembre");
+// let resultado = meses.includes("Diciembre");
 
 
 // Some ideal para arreglo de objetos
 
-resultado = carrito.some(function(producto) {
-    return producto.nombre === "Celular "
-})
+// resultado = carrito.some(function(producto) {
+//     return producto.nombre === "Celular "
+// })
 
-console.log(resultado);
+// console.log(resultado);
 
 // Reduce
 
-resultado = carrito.reduce(function(total, producto) {
-    return total + producto.precio
-}, 0)
+// resultado = carrito.reduce(function(total, producto) {
+//     return total + producto.precio
+// }, 0)
 
-console.log(resultado);
+// console.log(resultado);
 
 // Filter
 
-resultado = carrito.filter(function(producto) {
-    return producto.precio > 400
-})
+// resultado = carrito.filter(function(producto) {
+//     return producto.precio > 400
+// })
 
-resultado = carrito.filter(function(producto) {
-    return producto.nombre === "Celular"
-})
+// resultado = carrito.filter(function(producto) {
+//     return producto.nombre === "Celular"
+// })
 
 
-console.log(resultado);
+// console.log(resultado);
