@@ -4,37 +4,75 @@
 
 // Declaración de función
 
-function sumar() {
-    console.log(10 + 10);
-}
+// function sumar() {
+//     console.log(10 + 10);
+// }
 
-sumar();
+// sumar();
 
 //Expresión de la función
 
-const sumar2 = function() {
-    console.log(3 + 3);
-}
+// const sumar2 = function() {
+//     console.log(3 + 3);
+// }
 
-sumar2();
+// sumar2();
 
 // IIFE
-(function() {
-   console.log("Esto es una función")
-})(); // Previene que no se puedan leer de otros archivos
+// (function() {
+//    console.log("Esto es una función")
+// })(); // Previene que no se puedan leer de otros archivos
 
 
 // -- ** HOISTING **
 
-sumar();
-function sumar() {
-    console.log(10 + 10);
-} // Funciona, el hoisting primero reconoce la variable
+// Declaración de la función
+
+// sumar();
+// function sumar() {
+//     console.log(10 + 10);
+// } // Funciona, el hoisting primero reconoce la variable
 // y en la segunda lectura la llama
 
+// Expresión de la función
 
-sumar2();
-const sumar2 = function() {
-    console.log(3 + 3); 
-} // No funciona. El hoisting toma la función como variable, 
+// sumar2();
+// const sumar2 = function() {
+//     console.log(3 + 3); 
+// } // No funciona. El hoisting toma la función como variable, 
 // y en la segunda lectura no encuentra la función a la que llamar
+
+
+// ** -- MÉTODOS Y FUNCIONES -- **
+
+
+// const numero1 = 20;
+// const numero2 = "20";
+
+// console.log(parseInt(numero2)) // parseInt() es una función
+// console.log(numero1.toString()) // .toString() es un método
+
+// ** -- PARÁMETROS Y ARGUMENTOS -- **
+
+function sumar(n1, n2) { // número1, ...2 son parámetros
+    console.log(n1 + n2);
+}
+sumar(10, 20); // Argumentos, o los valores reales
+sumar(3, 3);
+sumar(3, 6);
+sumar(1, 2);
+
+
+const sumar2 = function(n3, n4) {
+    console.log(n3 + n4); 
+}
+sumar2(5, 10);
+
+// Parámetros por default. En caso de que no se asignen
+// valores, se asigna un parámetro por default para que JS
+// no arroje error o no salga NaN. Ej:
+
+function sumar3(n5 = 0, n6 =0) {
+    console.log(n5 + n6);
+}
+sumar3( );
