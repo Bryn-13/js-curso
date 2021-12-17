@@ -54,25 +54,59 @@
 
 // ** -- PARÁMETROS Y ARGUMENTOS -- **
 
-function sumar(n1, n2) { // número1, ...2 son parámetros
-    console.log(n1 + n2);
-}
-sumar(10, 20); // Argumentos, o los valores reales
-sumar(3, 3);
-sumar(3, 6);
-sumar(1, 2);
+// function sumar(n1, n2) { // número1, ...2 son parámetros
+//     console.log(n1 + n2);
+// }
+// sumar(10, 20); // Argumentos, o los valores reales
+// sumar(3, 3);
+// sumar(3, 6);
+// sumar(1, 2);
 
 
-const sumar2 = function(n3, n4) {
-    console.log(n3 + n4); 
-}
-sumar2(5, 10);
+// const sumar2 = function(n3, n4) {
+//     console.log(n3 + n4); 
+// }
+// sumar2(5, 10);
 
 // Parámetros por default. En caso de que no se asignen
 // valores, se asigna un parámetro por default para que JS
 // no arroje error o no salga NaN. Ej:
 
-function sumar3(n5 = 0, n6 =0) {
-    console.log(n5 + n6);
+// function sumar3(n5 = 0, n6 =0) {
+//     console.log(n5 + n6);
+// }
+// sumar3( );
+
+
+
+
+// ** -- FUNCIONES QUE RETORNAN VALORES -- **
+
+// function sumar(n1, n2) {  // Diferencia entre console.log y return = console.log lo muestra en la consola; return sólo lo procesa para que se muestre cuando se llame
+//     return n1 + n2;
+// }
+
+// let resultado = sumar(2, 3);
+
+// console.log(resultado)
+
+let total = 0
+
+function agregarCarrito(precio) {
+    return total += precio;
 }
-sumar3( );
+
+function calcularImpuesto(total) {
+    return 1.15 * total;
+}
+
+total = agregarCarrito(200);
+total = agregarCarrito(400);
+total = agregarCarrito(600);
+total = agregarCarrito(800);
+
+console.log(total)
+
+const totalAPagar = calcularImpuesto(total)
+
+console.log(`El total a pagar con impuestos es de: ${totalAPagar}`)
