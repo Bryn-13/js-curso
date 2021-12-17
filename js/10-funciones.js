@@ -35,6 +35,9 @@ function sumar() {
 
 sumar2();
 const sumar2 = function() {
-    console.log(3 + 3);
+    console.log(3 + 3); 
 } // No funciona. El hoisting toma la función como variable, 
 // y en la segunda lectura no encuentra la función a la que llamar
+
+
+// holi
