@@ -24,7 +24,7 @@ sumar2();
 })(); // Previene que no se puedan leer de otros archivos
 
 
-// -- ** HOISTING ** -- !! e.e
+// -- ** HOISTING **
 
 sumar();
 function sumar() {
